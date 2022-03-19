@@ -3,6 +3,7 @@ using Domain.Entities;
 using FastEndpoints;
 using FastEndpoints.Security;
 using Microsoft.AspNetCore.Identity;
+using WebApi.PreProcessors;
 
 namespace WebApi.Features.Login
 {
@@ -10,11 +11,13 @@ namespace WebApi.Features.Login
     {
         private readonly IPasswordHasher<User> _passwordHasher;
         private readonly IUserService _userService;
+        private readonly ILogger<UserLoginEndpoint> logger;
 
-        public UserLoginEndpoint(IUserService userService, IPasswordHasher<User> passwordHasher)
+        public UserLoginEndpoint(IUserService userService, IPasswordHasher<User> passwordHasher, ILogger<UserLoginEndpoint> logger)
         {
             this._userService = userService;
             this._passwordHasher = passwordHasher;
+            this.logger = logger;
         }
 
         public override void Configure()
@@ -22,6 +25,7 @@ namespace WebApi.Features.Login
             Verbs(Http.POST);
             Routes("/api/login");
             AllowAnonymous();
+            this.PreProcessors(new PreRequestLogger<LoginRequest>());
         }
 
         public override async Task HandleAsync(LoginRequest req, CancellationToken ct)

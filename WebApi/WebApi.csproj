@@ -9,10 +9,10 @@
   </PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="FastEndpoints" Version="3.9.1" />
-		<PackageReference Include="FastEndpoints.Security" Version="3.9.1" />
-		<PackageReference Include="FastEndpoints.Swagger" Version="3.9.1" />
-		<PackageReference Include="FastEndpoints.Validation" Version="3.9.1" />
+		<PackageReference Include="FastEndpoints" Version="3.10.0" />
+		<PackageReference Include="FastEndpoints.Security" Version="3.10.0" />
+		<PackageReference Include="FastEndpoints.Swagger" Version="3.10.0" />
+		<PackageReference Include="FastEndpoints.Validation" Version="3.10.0" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.3" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.3" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.3">
@@ -20,7 +20,7 @@
 			<PrivateAssets>all</PrivateAssets>
 		</PackageReference>
 		<PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="6.0.0" />
-		<PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="5.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="6.0.1" />
 		<PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="6.0.1" />
 		<PackageReference Include="Serilog.AspNetCore" Version="5.0.0" />
 		<PackageReference Include="Serilog.Enrichers.Environment" Version="2.2.0" />
